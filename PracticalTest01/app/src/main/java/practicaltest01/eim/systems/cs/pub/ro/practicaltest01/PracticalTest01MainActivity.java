@@ -79,7 +79,8 @@ public class PracticalTest01MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
         if (requestCode == SECONDARY_ACTIVITY_REQUEST_CODE) {
-            Toast.makeText(this, "The activity returned with result " + resultCode, Toast.LENGTH_LONG).show();
+            String result = (resultCode == RESULT_OK ? "OK" : "CANCEL");
+            Toast.makeText(this, "The activity returned with result " + result, Toast.LENGTH_LONG).show();
         }
     }
 }

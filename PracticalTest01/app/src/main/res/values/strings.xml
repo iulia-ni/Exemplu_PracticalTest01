@@ -4,4 +4,7 @@
     <string name="_0">0</string>
     <string name="press_me">Press me!</string>
     <string name="press_me_too">Press me too!</string>
+    <string name="label_secondary_activity_title">Practical Test 01 Secondary</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
 </resources>

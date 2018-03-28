@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".PracticalTest01SecondaryActivity"
+            android:label="@string/label_secondary_activity_title" >
+            <intent-filter>
+                <action android:name="ro.pub.cs.systems.eim.intent.action.PracticalTest01SecondaryActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!--DEFAULT ca sa poata sa fie invocata printr-o intentie-->
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

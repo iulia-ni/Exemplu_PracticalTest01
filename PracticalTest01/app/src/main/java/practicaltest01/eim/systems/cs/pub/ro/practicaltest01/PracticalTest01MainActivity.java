@@ -43,4 +43,25 @@ public class PracticalTest01MainActivity extends AppCompatActivity {
         rightButton.setOnClickListener(buttonClickListener);
         navigateButton = findViewById(R.id.navigate_button);
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putString("leftCount", leftEditText.getText().toString());
+        savedInstanceState.putString("rightCount", rightEditText.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        if (savedInstanceState.containsKey("leftCount")) {
+            leftEditText.setText(savedInstanceState.getString("leftCount"));
+        } else {
+            leftEditText.setText(String.valueOf(0));
+        }
+        if (savedInstanceState.containsKey("rightCount")) {
+            rightEditText.setText(savedInstanceState.getString("rightCount"));
+        } else {
+            rightEditText.setText(String.valueOf(0));
+        }
+    }
 }
